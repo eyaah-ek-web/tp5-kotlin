@@ -1,5 +1,5 @@
 class Library(val libraryName: String) {
-     inner class Book(
+    class Book(
         val title: String,
         val author: String
     ) {
