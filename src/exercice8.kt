@@ -1,13 +1,4 @@
-enum class DayOfWeek {
-    LUNDI,
-    MARDI,
-    MERCREDI,
-    JEUDI,
-    VENDREDI,
-    SAMEDI,
-    DIMANCHE
-}
-
+enum class DayOfWeek {LUNDI,MARDI,MERCREDI,JEUDI,VENDREDI,SAMEDI,DIMANCHE}
 fun afficherMessage(jour: DayOfWeek) {
     when (jour) {
         DayOfWeek.LUNDI -> println("Lundi : début de la semaine")
@@ -19,7 +10,6 @@ fun afficherMessage(jour: DayOfWeek) {
         DayOfWeek.DIMANCHE -> println("Dimanche : dernier jour du week-end")
     }
 }
-
 fun main() {
     afficherMessage(DayOfWeek.LUNDI)
     afficherMessage(DayOfWeek.VENDREDI)
