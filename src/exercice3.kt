@@ -1,12 +1,8 @@
-data class User(
-    val id: Int,
-    val name: String,
-    val email: String
-)
+data class User(val id: Int, val nom: String, val email: String)
 fun afficherUtilisateursGmail(users: List<User>) {
     for (user in users) {
         if (user.email.endsWith("@gmail.com")) {
-            println(user.name)
+            println(user.nom)
         }
     }
 }
@@ -17,6 +13,5 @@ fun main() {
         User(3, "Charlie", "charlie@gmail.com"),
         User(4, "David", "david@hotmail.com")
     )
-
     afficherUtilisateursGmail(users)
 }
