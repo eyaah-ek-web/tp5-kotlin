@@ -1,19 +1,14 @@
 class Library(val libraryName: String) {
-    class Book(
-        val title: String,
-        val author: String
-    ) {
-        fun printDetails(library: Library) {
-            println("Bibliothèque : ${library.libraryName}")
+    inner class Book(val title: String, val author: String) {
+        fun printDetails() {
+            println("Bibliothèque : $libraryName")
             println("Titre : $title")
             println("Auteur : $author")
         }
     }
 }
-
 fun main() {
-    val library = Library("Bibliothèque Centrale")
-    val book = Library.Book("Le Petit Prince", "Antoine de Saint-Exupéry")
-
-    book.printDetails(library)
+    val library = Library("Anour")
+    val book = Library.Book("La boite a merveille", "Ahmad safrioui")
+    book.printDetails()
 }
